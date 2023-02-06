@@ -1,6 +1,6 @@
 import { Box, Divider, Grid, Paper, Stack, Typography } from "@mui/material"
 import LoginButton from "./LoginButton"
-import { AnimatedLogo } from "./AnimatedLogo"
+import AnimatedLogo from "./AnimatedLogo"
 
 
 
@@ -52,4 +52,4 @@ const LoginBox = () => {
 }
 
 
-export { LoginBox };
+export default LoginBox;

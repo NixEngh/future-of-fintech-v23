@@ -1,7 +1,4 @@
-import { Button, Link } from "@mui/material"
-
-
-//q: what's wrong with this code?
+import { Button, Link } from "@mui/material";
 
 const LoginButton = () => {
     return (
