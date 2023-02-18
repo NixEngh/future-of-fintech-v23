@@ -2,8 +2,8 @@
 ## Task description
 This is my solution to the task given by Stacc. The task was to create solutions surrounding electricity consumption. I decided to create a web app that when finished should function as an electricity management platform with the following features:
 - Login with Auth0
-- View electricity consumption (not possible to upload data yet)
-- Have an overview of different electricity providers
+- View electricity consumption (can read from database, but not possible to upload data yet)
+- Have an overview of different electricity providers (Read from the database
 
 The following features are not yet implemented:
 
