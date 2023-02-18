@@ -3,18 +3,11 @@ import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import AnimatedLogo from "./AnimatedLogo";
+import AnimatedLogo from "./Logo";
 
-const pages = ["Consumption", "Providers"];
-const settings = ["Profile", "Logout"];
+
 
 const NavBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleClickNav = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
 
   return (
     <AppBar position="static">

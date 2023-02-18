@@ -1,9 +1,42 @@
 
 ## Task description
-This is my solution to Stacc's future of fintech coding challenge.
-I was quite busy this week, so I decided to do a very limited task. I have created a simple web app that allows you to log in and log out using auth0. When logged in you can see the consumption data included in the task. 
+This is my solution to the task given by Stacc. The task was to create solutions surrounding electricity consumption. I decided to create a web app that when finished should function as an electricity management platform with the following features:
+- Login with Auth0
+- View electricity consumption (not possible to upload data yet)
+- Have an overview of different electricity providers
+
+The following features are not yet implemented:
+
+- Database for users and electricity consumption, including user roles (admin, user)
+- Compare different electricity providers wrt. consumption
+- Upload electricity consumption data
+
+## Technologies used
+My goal with this task was to challenge myself with technologies I haven't used before and/or don't fully understand. I chose to use the following technologies:
+- Next.js (used this before, but not built a full app with it)
+- Auth0
+- Material UI
+- Prisma orm
+- Sqlite (for development, haven't set up a database for production) 
+
 ## How to run
-Install dependencies with `yarn` and run the app with `yarn start`. The app will be available at `localhost:3000`.
-It's also hosted on vercel: https://stracc.vercel.app/
+Install dependencies with `yarn` and run the development server with `yarn dev`. The app will be available at `localhost:3000`.
+
+
 ## Comments
-I chose to use the material ui component library due to it's detailed documentation. I haven't used auth0 before and thought it didn't look too complicated while also being secure. I haven't worked much with authentication so I didn't dare implement it myself.
+I chose to include the .env files in the repo, since I'm not using any sensitive data. I know this is not best practice, but I wanted to make it easier for you to run the app.
+The app definitely isn't finished, but I'm happy with the progress I've made so far.
+I also created a prisma schema that contains a potential database structure, even though the database isn't populated yet.
+
+## Pictures
+Login page
+![Login page](pictures/login.png)
+
+Home page
+![Home page](pictures/home.png)
+
+Electricity consumption page
+![Electricity consumption page](pictures/consumption.png)
+
+Electricity providers page
+![Electricity providers page](pictures/providers.png)

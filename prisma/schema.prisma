@@ -1,0 +1,52 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Provider {
+  providerId Int    @id @default(autoincrement())
+  name       String
+  PricingModel PricingModel[]
+}
+
+model PricingModel {
+  pricingId Int    @id @default(autoincrement())
+  name      String
+  PricingParameter PricingParameter[]
+  providerId Int
+  provider   Provider @relation(fields: [providerId], references: [providerId])
+}
+
+model PricingParameter {
+  pricingParametersId Int          @id @default(autoincrement())
+  name                String
+  value               String
+  pricingModelId      Int
+  pricingModel        PricingModel @relation(fields: [pricingModelId], references: [pricingId])
+}
+
+model User {
+  userId    String    @id @default(uuid())
+  consumptionUnit ConsumptionUnit[]
+  role Role[]
+}
+
+model Role {
+  roleId Int    @id @default(autoincrement())
+  name   String
+  User   User[]
+}
+
+model ConsumptionUnit {
+  consumptionUnitId String    @id @default(uuid())
+  userId           String
+  from DateTime
+  to DateTime
+  consumption Float
+  unit String
+  user User @relation(fields: [userId], references: [userId])
+  }
