@@ -52,9 +52,6 @@ export default function ChartDataFromAPI() {
         <Typography variant="h5" >
           The plan is to be able to upload data:
         </Typography>
-        <Button variant="contained" color="primary">
-          Upload data
-        </Button>
 
 
       </Stack>

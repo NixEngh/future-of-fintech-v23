@@ -14,7 +14,6 @@ const Providers = () => {
   }, []);
 
   if (!data) return <div>Loading...</div>;
-  console.log(data);
   return (
     <div>
       <NavBar />
