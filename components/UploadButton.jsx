@@ -12,14 +12,14 @@ const UploadButton = () => {
       };
     })
   );
-  console.log(newdata);
+
   const uploadData = () => {
     fetch("/api/consumption", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: newdata,
     });
   };
 

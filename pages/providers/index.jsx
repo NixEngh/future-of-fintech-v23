@@ -28,6 +28,7 @@ const Providers = () => {
           <Typography variant="h1">Providers</Typography>
           {data.map((provider) => (
             <Paper
+              key={provider.providerId}
               elevation={3}
               sx={{
                 display: "flex",
@@ -43,7 +44,7 @@ const Providers = () => {
             >
               <Typography variant="h3">{provider.name}</Typography>
               {provider.PricingModel.map((pricingModel) => (
-                <Box>
+                <Box id={pricingModel.pricingId}>
                   <Typography variant="h5">
                     Pricing model: {pricingModel.name}
                   </Typography>

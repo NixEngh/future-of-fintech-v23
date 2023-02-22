@@ -46,6 +46,7 @@ const Dashboard = () => {
           <Stack item xs={12} align="center" spacing={2} divider={<Divider />}>
             {pages.map((page) => (
               <Button
+                key={page}
                 size="large"
                 variant="contained"
                 color="primary"

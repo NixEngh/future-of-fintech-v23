@@ -30,7 +30,7 @@ model PricingParameter {
 }
 
 model User {
-  userId    String    @id @default(uuid())
+  userId    String    @id 
   consumptionUnit ConsumptionUnit[]
   role Role[]
 }

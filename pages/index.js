@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import NavBar from "../components/NavBar";
 import LoginBox from "../components/LoginBox";
 import Dashboard from "../components/Dashboard";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const fetchUser = async () => {
   return await fetch("/api/user").then((res) => res.json());
@@ -12,7 +12,6 @@ const fetchUser = async () => {
 const createUser = () => {
   fetch("/api/user", {
     method: "POST",
-    
   });
   return;
 };
@@ -22,10 +21,11 @@ const IndexPage = () => {
 
   useEffect(() => {
     if (user) {
-      const fetchedUser = User().catch(console.error);
-      if (fetchedUser.length === 0) {
-        createUser();
-      }
+      fetchUser().then((data) => {
+        if (data.length === 0) {
+          createUser();
+        }
+      });
     }
   }, [user]);
 
